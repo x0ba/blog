@@ -2,7 +2,7 @@
 title: Secure Backup Methods
 author: Daniel Xu
 pubDatetime: 2023-07-09T02:05:51Z
-featured: true
+featured: false
 draft: false
 tags:
   - Privacy

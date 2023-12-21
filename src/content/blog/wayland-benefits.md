@@ -2,7 +2,7 @@
 title: Should you use Wayland?
 author: Daniel Xu
 pubDatetime: 2023-02-09T02:05:51Z
-featured: true
+featured: false
 draft: false
 tags:
   - Linux
