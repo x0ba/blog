@@ -1,7 +1,7 @@
 +++
 title = 'Syncthing '
-subtitle = "(or, why I stopped using cloud storage)"
-summary = "Here, I sing my praises for Syncthing."
+subtitle = "(or, why i stopped using cloud storage)"
+summary = "here, i sing my praises for syncthing."
 date = 2023-09-22T17:55:14-07:00
 draft = false
 author = "Daniel"
