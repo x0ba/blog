@@ -1,0 +1,86 @@
+baseURL = "https://x0ba.net"
+defaultContentLanguage = "en"
+languageCode = "en"
+title = "daniel's jots"
+description = "I yap here"
+bundle = true
+theme = "DoIt"
+
+[params]
+
+  version = "0.2.X"
+
+  title = "x0ba's jots"
+  description = "I yap here"
+  defaultTheme = "auto"
+  dateFormat = "2006-01-02"
+
+  enablePWA = true
+
+  [params.search]
+    enable = true
+    type = "lunr"
+    contentLength = 4000
+    placeholder = "Query Database"
+    maxResultLength = 10
+    snippetLength = 30
+    highlightTag = "em"
+    absoluteURL = false
+
+
+  [params.footer]
+    enable = true
+    custom = ""
+    hugo = false
+    copyright = true
+    author = true
+    since = 2022
+    icp = ""
+    license = '<a rel="license external nofollow noopener noreffer" href="https://opensource.org/licenses/GPL-3.0" target="_blank">GPL-3.0</a>'
+
+
+  [params.home.profile]
+    enable = true
+    avatarURL = "/images/profile.jpg"
+    title = "daniel's jots"
+    subtitle = "I yap here. Sometimes my yapping is beneficial."
+    typeit = true
+    social = true
+
+
+  [params.social]
+    GitHub = "x0ba"
+    Gitlab = "x0ba"
+    Discord = "x0ba"
+    Email = "danielxu0307@proton.me"
+    RSS = "/index.xml"
+
+  [params.menu]
+    [[menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+
+  [params.markup]
+    [markup.highlight]
+      noClasses = false
