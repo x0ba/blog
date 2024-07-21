@@ -33,5 +33,49 @@
           };
         }
       );
+
+      apps = forAllSystems supportedSystems (system:
+        let
+          pkgs = pkgsFor.${system};
+        in
+        {
+          default = {
+            type = "app";
+            program = pkgs.writeShellApplication {
+              name = "run-hugo-server";
+              runtimeInputs = [ pkgs.hugo ];
+              text = ''
+                hugo server
+              '';
+            } + "/bin/run-hugo-server";
+          };
+        }
+      );
+
+      packages = forAllSystems supportedSystems (system:
+        let
+          pkgs = pkgsFor.${system};
+        in
+        {
+          default = pkgs.stdenv.mkDerivation {
+            name = "hugo-site";
+            src = ./.;
+            buildInputs = [ pkgs.hugo ];
+            buildPhase = ''
+              # Ensure the theme is available
+              if [ ! -d "themes/DoIt" ]; then
+                mkdir -p themes
+                git clone https://github.com/HEIGE-PCloud/DoIt.git themes/DoIt
+              fi
+              
+              # Build the site
+              hugo --minify
+            '';
+            installPhase = ''
+              cp -r public $out
+            '';
+          };
+        }
+      );
     };
 }
